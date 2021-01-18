@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PyAnsys DPF-Post &#8212; PyANSYS DPF 0.2.1 documentation</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/ansys.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery-rendered-html.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting Started" href="getting_started/index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="#">
+    
+      <img src="_static/pyansys-logo-black-cropped.png" class="logo" alt="logo" />
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="getting_started/index.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="user_guide/index.html">User Guide</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="api/index.html">DPF-Post API</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="examples/index.html">Examples</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="contributing.html">Contributing</a>
+        </li>
+        
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/pyansys/DPF-Core" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item active">
+    
+  
+    <ul class="nav bd-sidenav">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#brief-demo" class="nav-link">Brief Demo</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#key-features" class="nav-link">Key Features</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="pyansys-dpf-post">
+<h1>PyAnsys DPF-Post<a class="headerlink" href="#pyansys-dpf-post" title="Permalink to this headline">¶</a></h1>
+<p>The Data Processing Framework (DPF) is designed to provide numerical
+simulation users/engineers with a toolbox for accessing and
+transforming simulation data. DPF can access data from solver result
+files as well as several neutral formats (csv, hdf5, vtk,
+etc.). Various operators are available allowing the manipulation and
+the transformation of this data.</p>
+<p>The Python <code class="docutils literal notranslate"><span class="pre">ansys.dpf.post</span></code> module provides an simplified Python
+interface to DPF, thus enabling rapid post-processing, without ever
+leaving a Python environment.</p>
+<p>This module leverages the DPF-Core module <code class="docutils literal notranslate"><span class="pre">ansys.dpf.core</span></code> module
+and can be found by visiting <a class="reference external" href="https://github.com/pyansys/DPF-Core">DPF-Core GitHub</a>.  Use <code class="docutils literal notranslate"><span class="pre">ansys.dpf.core</span></code> for
+building more advanced and customized workflows using Ansys’s DPF.</p>
+<div class="section" id="brief-demo">
+<h2>Brief Demo<a class="headerlink" href="#brief-demo" title="Permalink to this headline">¶</a></h2>
+<p>Opening and plotting a result file generated from Ansys workbench or
+MAPDL is as easy as:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">post</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.dpf.post</span> <span class="kn">import</span> <span class="n">examples</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">load_solution</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">multishells_rst</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">stress</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">stress</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">stress</span><span class="o">.</span><span class="n">xx</span><span class="o">.</span><span class="n">plot_contour</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="_images/main_example.png"><img alt="_images/main_example.png" src="_images/main_example.png" style="width: 300pt;" /></a>
+<p class="caption"><span class="caption-text">Basic Stress Contour Plot</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Or extract the raw data as a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array with</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">stress</span><span class="o">.</span><span class="n">xx</span><span class="o">.</span><span class="n">get_data_at_field</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="go">array([-3.37871094e+10, -4.42471752e+10, -4.13249463e+10, ...,</span>
+<span class="go">        3.66408342e+10,  1.40736914e+11,  1.38633557e+11])</span>
+</pre></div>
+</div>
+<p>See the <a class="reference internal" href="examples/index.html#gallery"><span class="std std-ref">Examples</span></a> for more detailed examples.</p>
+</div>
+<div class="section" id="key-features">
+<h2>Key Features<a class="headerlink" href="#key-features" title="Permalink to this headline">¶</a></h2>
+<p><strong>Computational Efficiency</strong></p>
+<p>The DPF-Post module is based on DPF Framework that been developed with
+a data framework that localizes the loading and post-processing within
+the DPF server, enabling rapid post-processing workflows as this is
+written in C and FORTRAN.  At the same time, the DPF-Post Python
+module presents the result in Pythonic manner, allowing for the rapid
+development of simple or complex post-processing scripts.</p>
+<p><strong>Easy to use</strong></p>
+<p>The API of DPF-Post module has been developed in order to make easy
+post-processing steps easier by automating the use of DPF’s chained
+operators.  This allows for fast post-processing of potentially
+multi-gigabyte models in a short script.  DPF-Post also details the
+usage of the operators used when computing the results so you can also
+build your own custom, low level scripts using the
+<a class="reference external" href="https://github.com/pyansys/DPF-Core">DPF-Core</a> module.</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='right-next' id="next-link" href="getting_started/index.html" title="next page">Getting Started</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2021, ANSYS.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

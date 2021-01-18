@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANSYS DPF-POST Use result keywords &#8212; PyANSYS DPF 0.2.1 documentation</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/ansys.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Compute Complex Results from Modal or Harmonic Analyses" href="04-complex_results.html" />
+    <link rel="prev" title="ANSYS DPF Basic Features of the POST API" href="02-basics.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="../../index.html">
+    
+      <img src="../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo" />
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../getting_started/index.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../user_guide/index.html">User Guide</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../api/index.html">DPF-Post API</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="../index.html">Examples</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../contributing.html">Contributing</a>
+        </li>
+        
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/pyansys/DPF-Core" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item active">
+    
+  
+    <ul class="nav bd-sidenav">
+        
+        
+        
+        
+        
+        
+        
+        
+          
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-examples-02-detailed-examples-03-result-keywords-py"><span class="std std-ref">here</span></a>
+to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="ansys-dpf-post-use-result-keywords">
+<span id="ref-result-keywords"></span><span id="sphx-glr-examples-02-detailed-examples-03-result-keywords-py"></span><h1>ANSYS DPF-POST Use result keywords<a class="headerlink" href="#ansys-dpf-post-use-result-keywords" title="Permalink to this headline">¶</a></h1>
+<p>This tutorial shows how to get more precise result with keywords while
+calling a result from a solution object.</p>
+<p><strong>Get started</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">post</span>
+<span class="kn">from</span> <span class="nn">ansys.dpf.post</span> <span class="kn">import</span> <span class="n">examples</span>
+</pre></div>
+</div>
+<p><strong>Get the solution object</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">load_solution</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">multishells_rst</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Get the keyword list</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">post</span><span class="o">.</span><span class="n">print_available_keywords</span><span class="p">()</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>element_scoping: list, int or dpf.core.Scoping
+grouping: str. Use post.grouping.(...) as helper.
+location: str. Use post.locations.(...) as helper.
+mapdl_grouping: int. Write 186 to get mapdl_elements solid_186.
+named_selection: str. Name of named_selection.
+node_scoping: list, int or dpf.core.Scoping
+set: int
+time: float
+time_scoping: list, int or dpf.core.Scoping
+</pre></div>
+</div>
+<p><strong>Use a scoping on result</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># default location is nodal</span>
+<span class="n">displacement_result</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">displacement</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="n">post</span><span class="o">.</span><span class="n">locations</span><span class="o">.</span><span class="n">nodal</span><span class="p">,</span>
+                                            <span class="n">node_scoping</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">displacement</span> <span class="o">=</span> <span class="n">displacement_result</span><span class="o">.</span><span class="n">vector</span>
+
+<span class="n">displacement</span><span class="o">.</span><span class="n">get_data_at_field</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">stress_with_elem_scop_result</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">stress</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="n">post</span><span class="o">.</span><span class="n">locations</span><span class="o">.</span><span class="n">elemental_nodal</span><span class="p">,</span>
+                                               <span class="n">element_scoping</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">stress_with_elem_scop</span> <span class="o">=</span> <span class="n">stress_with_elem_scop_result</span><span class="o">.</span><span class="n">tensor</span>
+
+<span class="n">stress_with_elem_scop</span><span class="o">.</span><span class="n">get_data_at_field</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[-1.89351567e+10, -1.76835359e+10, -1.23315384e+10,
+         1.27527844e+10,  5.75103130e+09,  4.30928026e+09],
+       [ 2.26888166e+09, -1.98936699e+10, -4.28985472e+09,
+         3.73483930e+10,  1.28815250e+07,  2.29405491e+09],
+       [ 4.62267494e+09,  4.15775621e+10,  1.28377395e+10,
+         1.36264980e+10,  5.61091738e+09,  4.14261606e+09],
+       [ 3.07029586e+10,  6.01620111e+10,  9.52341402e+09,
+         2.26091377e+10, -1.73616087e+10, -4.64480973e+09],
+       [ 3.09432279e+10, -2.77392410e+09, -6.13098650e+09,
+         9.00784538e+09,  3.47990848e+08, -2.41304392e+10],
+       [ 2.80970793e+10,  5.10227200e+09,  4.87711840e+08,
+         1.04294881e+10,  1.77319514e+09, -3.26250573e+09],
+       [-3.35771187e+09, -7.58900634e+09, -5.19623475e+09,
+        -9.62379008e+08,  7.06462080e+07, -8.84417984e+08],
+       [-1.66533110e+10, -5.39330662e+09, -1.18382500e+10,
+        -3.91451443e+09,  7.81984448e+08,  1.12681376e+08]])
+</pre></div>
+</div>
+<p><strong>Use a named selection on result</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stress_on_ns_result</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">stress</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="n">post</span><span class="o">.</span><span class="n">locations</span><span class="o">.</span><span class="n">elemental_nodal</span><span class="p">,</span>
+                                      <span class="n">named_selection</span><span class="o">=</span><span class="s2">&quot;SELECTION&quot;</span><span class="p">)</span>
+<span class="n">stress_on_ns</span> <span class="o">=</span> <span class="n">stress_on_ns_result</span><span class="o">.</span><span class="n">tensor</span>
+<span class="n">stress_on_ns</span><span class="o">.</span><span class="n">num_fields</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">stress_on_ns</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>5040
+</pre></div>
+</div>
+<p><strong>Get a subresult</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">disp_x</span> <span class="o">=</span> <span class="n">displacement_result</span><span class="o">.</span><span class="n">x</span>
+
+<span class="n">stress_yz</span> <span class="o">=</span> <span class="n">stress_with_elem_scop_result</span><span class="o">.</span><span class="n">yz</span>
+
+<span class="n">stress_principal_1</span> <span class="o">=</span> <span class="n">stress_on_ns_result</span><span class="o">.</span><span class="n">principal_3</span>
+<span class="n">stress_principal_1</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;ansys.dpf.post.result_data.ResultData object at 0x7f04eeb08210&gt;
+</pre></div>
+</div>
+<p><strong>Filter on a time / time_scoping / a set</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">solution</span><span class="o">.</span><span class="n">time_freq_support</span><span class="p">)</span>
+
+<span class="n">stress_on_time_1s_result</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">stress</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mf">1.</span><span class="p">)</span>
+<span class="n">stress_on_time_1s</span> <span class="o">=</span> <span class="n">stress_on_time_1s_result</span><span class="o">.</span><span class="n">tensor</span>
+
+<span class="n">displacement_on_set_1_result</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">displacement</span><span class="p">(</span><span class="nb">set</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">displacement_on_set_1</span> <span class="o">=</span> <span class="n">displacement_on_set_1_result</span><span class="o">.</span><span class="n">vector</span>
+
+<span class="n">elastic_strain_with_time_scoping_result</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">elastic_strain</span><span class="p">(</span><span class="n">time_scoping</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">elastic_strain_with_time_scoping</span> <span class="o">=</span> <span class="n">elastic_strain_with_time_scoping_result</span><span class="o">.</span><span class="n">tensor</span>
+<span class="n">elastic_strain_with_time_scoping</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Time/Frequency Info:
+        Number of sets: 1
+
+With complex values
+
+ Cumulative      Time (s)       Loadstep     Substep
+     1             1.0             1            1
+
+
+&lt;ansys.dpf.post.result_data.ResultData object at 0x7f04eeb36e50&gt;
+</pre></div>
+</div>
+<p><strong>Make a grouping</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">displacement_result</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">displacement</span><span class="p">(</span><span class="n">grouping</span><span class="o">=</span><span class="n">post</span><span class="o">.</span><span class="n">grouping</span><span class="o">.</span><span class="n">by_el_shape</span><span class="p">)</span>
+<span class="n">displacement_by_el_shape</span> <span class="o">=</span> <span class="n">displacement_result</span><span class="o">.</span><span class="n">vector</span>
+
+<span class="c1"># filter only MAPDL elements of type solid 186</span>
+<span class="n">stress_result</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">stress</span><span class="p">(</span><span class="n">mapdl_grouping</span><span class="o">=</span><span class="mi">186</span><span class="p">)</span>
+<span class="n">stress_on_solid_186</span> <span class="o">=</span> <span class="n">stress_result</span><span class="o">.</span><span class="n">tensor</span>
+<span class="n">stress_on_solid_186</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;ansys.dpf.post.result_data.ResultData object at 0x7f04eebc82d0&gt;
+</pre></div>
+</div>
+<p><strong>Manipulate the result object and change its definition</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">stress_on_ns_result</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">stress_on_ns_result</span><span class="o">.</span><span class="n">definition</span><span class="o">.</span><span class="n">location</span><span class="p">)</span>
+
+<span class="n">stress_on_ns_result</span><span class="o">.</span><span class="n">definition</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">locations</span><span class="o">.</span><span class="n">elemental</span>
+<span class="n">stress_on_ns_result</span><span class="o">.</span><span class="n">definition</span><span class="o">.</span><span class="n">time</span> <span class="o">=</span> <span class="mf">1.</span>
+<span class="n">stress_on_ns_elemental</span> <span class="o">=</span> <span class="n">stress_on_ns_result</span><span class="o">.</span><span class="n">tensor</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">stress_on_ns_result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Stress Tensor object.
+
+Object properties:
+ - location   : ElementalNodal
+ - named_selection : SELECTION
+
+ElementalNodal
+Stress Tensor object.
+
+Object properties:
+ - location   : Elemental
+ - named_selection : SELECTION
+ - time       : 1.0
+</pre></div>
+</div>
+<p><strong>Use the misc. results</strong>
+Same keywords can be used here. For complex result, the keyword
+“phase” (float) can also be used.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stress_ratio</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">elemental_stress_ratio</span><span class="p">(</span><span class="n">node_scoping</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">32</span><span class="p">],</span> <span class="n">time</span><span class="o">=</span><span class="mf">1.</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">stress_ratio</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Stress result.
+
+This result has been computed using dpf.core.Operator objects, which
+have been chained together according to the following list:
+- ENL_SRAT: Result operator. Compute the desired result.
+- to_elemental_fc: This operator will compute the elemental averaging of a fields container.
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.162 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-detailed-examples-03-result-keywords-py">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/6f34aa3b03c316c024a86943744a9931/03-result_keywords.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">03-result_keywords.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/f79901eb7f40795b347c6b736e2a93c4/03-result_keywords.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">03-result_keywords.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="02-basics.html" title="previous page">ANSYS DPF Basic Features of the POST API</a>
+    <a class='right-next' id="next-link" href="04-complex_results.html" title="next page">Compute Complex Results from Modal or Harmonic Analyses</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2021, ANSYS.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

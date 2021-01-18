@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compute Complex Results from Modal or Harmonic Analyses &#8212; PyANSYS DPF 0.2.1 documentation</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/ansys.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Contributing" href="../../contributing.html" />
+    <link rel="prev" title="ANSYS DPF-POST Use result keywords" href="03-result_keywords.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="../../index.html">
+    
+      <img src="../../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo" />
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../getting_started/index.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../user_guide/index.html">User Guide</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../api/index.html">DPF-Post API</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="../index.html">Examples</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../contributing.html">Contributing</a>
+        </li>
+        
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/pyansys/DPF-Core" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item active">
+    
+  
+    <ul class="nav bd-sidenav">
+        
+        
+        
+        
+        
+        
+        
+        
+          
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-examples-02-detailed-examples-04-complex-results-py"><span class="std std-ref">here</span></a>
+to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="compute-complex-results-from-modal-or-harmonic-analyses">
+<span id="ref-complex-results"></span><span id="sphx-glr-examples-02-detailed-examples-04-complex-results-py"></span><h1>Compute Complex Results from Modal or Harmonic Analyses<a class="headerlink" href="#compute-complex-results-from-modal-or-harmonic-analyses" title="Permalink to this headline">¶</a></h1>
+<p>This tutorial shows how to access complex results using the DPF-POST
+module API.</p>
+<p><strong>Get started</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">post</span>
+<span class="kn">from</span> <span class="nn">ansys.dpf.post</span> <span class="kn">import</span> <span class="n">examples</span>
+</pre></div>
+</div>
+<p><strong>Get the solution object</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">load_solution</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">complex_rst</span><span class="p">)</span>
+<span class="n">solution</span><span class="o">.</span><span class="n">has_complex_result</span><span class="p">()</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+<p><strong>Get displacement result</strong></p>
+<p>This result will contain a field for real values and a field for
+imaginary values)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">disp_result</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">displacement</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Check if the support has complex frequencies</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">disp_result</span><span class="o">.</span><span class="n">has_complex_frequencies</span><span class="p">()</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+<p><strong>Compute the result</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">disp</span> <span class="o">=</span> <span class="n">disp_result</span><span class="o">.</span><span class="n">vector</span>
+<span class="n">disp</span><span class="o">.</span><span class="n">num_fields</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+<p><strong>Deals with phase</strong> (phase unit is degree, phase must be a float)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">phase</span> <span class="o">=</span> <span class="mf">39.0</span>
+<span class="n">disp_at_phase</span> <span class="o">=</span> <span class="n">disp_result</span><span class="o">.</span><span class="n">vector_at_phase</span><span class="p">(</span><span class="n">phase</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Maximum displacement at phase </span><span class="si">{</span><span class="n">phase</span><span class="si">}</span><span class="s1">:&#39;</span><span class="p">,</span> <span class="n">disp_at_phase</span><span class="o">.</span><span class="n">max_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;There are </span><span class="si">{</span><span class="n">disp_at_phase</span><span class="o">.</span><span class="n">num_fields</span><span class="si">}</span><span class="s1"> fields&#39;</span><span class="p">)</span>
+<span class="n">real_field</span> <span class="o">=</span> <span class="n">disp_result</span><span class="o">.</span><span class="n">vector_at_phase</span><span class="p">(</span><span class="mf">0.</span><span class="p">)</span>
+<span class="n">img_field</span> <span class="o">=</span> <span class="n">disp_result</span><span class="o">.</span><span class="n">vector_at_phase</span><span class="p">(</span><span class="mf">90.</span><span class="p">)</span>
+
+<span class="n">real_field</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Maximum displacement at phase 39.0: [[2.15187123e-09 2.15185939e-09 3.19282171e-10]]
+There are 1 fields
+
+&lt;ansys.dpf.post.result_data.ResultData object at 0x7f04f1ccc910&gt;
+</pre></div>
+</div>
+<p><strong>Get amplitude</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">disp_ampl</span> <span class="o">=</span> <span class="n">disp_result</span><span class="o">.</span><span class="n">vector_amplitude</span>
+<span class="n">disp_ampl</span><span class="o">.</span><span class="n">num_fields</span>
+<span class="n">disp_ampl</span><span class="o">.</span><span class="n">max_data</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[2.76946052e-09, 2.76952555e-09, 4.10914321e-10]])
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.090 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-detailed-examples-04-complex-results-py">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/9bac9438e6eda0bb3292111c91c9809c/04-complex_results.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">04-complex_results.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/72093710ed5bea093fc5228b1f44d4d7/04-complex_results.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">04-complex_results.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="03-result_keywords.html" title="previous page">ANSYS DPF-POST Use result keywords</a>
+    <a class='right-next' id="next-link" href="../../contributing.html" title="next page">Contributing</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2021, ANSYS.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

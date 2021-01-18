@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ResultData object &#8212; PyANSYS DPF 0.2.1 documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/ansys.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery-rendered-html.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Examples" href="../examples/index.html" />
+    <link rel="prev" title="Result Object" href="result_object.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="../index.html">
+    
+      <img src="../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo" />
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../getting_started/index.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../user_guide/index.html">User Guide</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">DPF-Post API</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../examples/index.html">Examples</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../contributing.html">Contributing</a>
+        </li>
+        
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/pyansys/DPF-Core" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item active">
+    
+  
+    <ul class="nav bd-sidenav">
+        
+        
+        
+        
+        
+        
+          
+            
+                <li class="">
+                    <a href="solution.html">Solution object</a>
+                </li>
+            
+          
+            
+                <li class="">
+                    <a href="result_object.html">Result Object</a>
+                </li>
+            
+          
+            
+                <li class="active">
+                    <a href="">ResultData object</a>
+                </li>
+            
+          
+        
+        
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="resultdata-object">
+<span id="ref-api-result-data"></span><h1>ResultData object<a class="headerlink" href="#resultdata-object" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">ResultData</span></code> object is obtained from a <code class="docutils literal notranslate"><span class="pre">Result</span></code>.  It provides
+access to the result values contained within, as shown in the
+following example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">post</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.dpf.post</span> <span class="kn">import</span> <span class="n">examples</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">load_solution</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">multishells_rst</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">displacement</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">displacement</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">displacement</span><span class="o">.</span><span class="n">vector</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># access the data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vector</span><span class="o">.</span><span class="n">get_data_at_field</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py class">
+<dt id="ansys.dpf.post.result_data.ResultData">
+<em class="property">class </em><code class="sig-prename descclassname">ansys.dpf.post.result_data.</code><code class="sig-name descname">ResultData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">operator_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">data_sources</span></em>, <em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">elem_average</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">op_average</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">element_scoping</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_scoping</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">named_selection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grouping</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">phase</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subresult</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mapdl_grouping</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">set</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time_scoping</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.result_data.ResultData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instance of the result of a dpf result object.
+Created thanks to the dpf result object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>list of keywords</strong> (<em>Following</em>) – <ul>
+<li><p>location</p></li>
+<li><p>node_scoping</p></li>
+<li><p>element_scoping</p></li>
+<li><p>time</p></li>
+<li><p>grouping</p></li>
+</ul>
+</p></li>
+<li><p><strong>entire list of parameters can be found using</strong> (<em>The</em>) – <code class="docutils literal notranslate"><span class="pre">post.print_available_keywords()</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">post</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">solution</span><span class="p">(</span><span class="s2">&quot;file.rst&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">disp</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">nodal_displacement</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">disp_on_nodes</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">nodal_displacement</span><span class="p">(</span><span class="n">node_scoping</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">23</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">disp_on_named_selection</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">nodal_displacement</span><span class="p">(</span><span class="n">named_selection</span><span class="o">=</span><span class="s2">&quot;SELECTION&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt id="ansys.dpf.post.result_data.ResultData.get_all_label_spaces">
+<code class="sig-name descname">get_all_label_spaces</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.result_data.ResultData.get_all_label_spaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all the label spaces contained in a result
+as a string.
+Labels can be used to select fields to plot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of dictionary (list of label space)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ansys.dpf.post.result_data.ResultData.get_data_at_field">
+<code class="sig-name descname">get_data_at_field</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">field_index</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.result_data.ResultData.get_data_at_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the data at the field with the specified index.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ansys.dpf.post.result_data.ResultData.get_max_data_at_field">
+<code class="sig-name descname">get_max_data_at_field</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">field_index</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.result_data.ResultData.get_max_data_at_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the maximum values field data at field_index.
+Chains the result operator to the “min_max_fc” operator,
+returns its result (output from pin 1).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ansys.dpf.post.result_data.ResultData.get_min_data_at_field">
+<code class="sig-name descname">get_min_data_at_field</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">field_index</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.result_data.ResultData.get_min_data_at_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the minimum values field data at field_index.
+Chains the result operator to the “min_max_fc” operator,
+returns its result (output from pin 0).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ansys.dpf.post.result_data.ResultData.get_scoping_at_field">
+<code class="sig-name descname">get_scoping_at_field</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">field_index</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.result_data.ResultData.get_scoping_at_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the scoping of the result.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ansys.dpf.post.result_data.ResultData.max">
+<em class="property">property </em><code class="sig-name descname">max</code><a class="headerlink" href="#ansys.dpf.post.result_data.ResultData.max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the maximum values field.
+Chains the result operator to the “min_max_fc” operator,
+returns its result (output from pin 1).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ansys.dpf.post.result_data.ResultData.max_data">
+<em class="property">property </em><code class="sig-name descname">max_data</code><a class="headerlink" href="#ansys.dpf.post.result_data.ResultData.max_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the maximum values field data.
+Chains the result operator to the “min_max_fc” operator,
+returns its result (output from pin 1).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ansys.dpf.post.result_data.ResultData.min">
+<em class="property">property </em><code class="sig-name descname">min</code><a class="headerlink" href="#ansys.dpf.post.result_data.ResultData.min" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the minimum values field.
+Chains the result operator to the “min_max_fc” operator,
+returns its result (output from pin 0).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ansys.dpf.post.result_data.ResultData.min_data">
+<em class="property">property </em><code class="sig-name descname">min_data</code><a class="headerlink" href="#ansys.dpf.post.result_data.ResultData.min_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the minimum values field data.
+Chains the result operator to the “min_max_fc” operator,
+returns its result (output from pin 0).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ansys.dpf.post.result_data.ResultData.num_fields">
+<em class="property">property </em><code class="sig-name descname">num_fields</code><a class="headerlink" href="#ansys.dpf.post.result_data.ResultData.num_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of fields contained in the result.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="ansys.dpf.post.result_data.ResultData.plot_contour">
+<code class="sig-name descname">plot_contour</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">display_option</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'time'</span></em>, <em class="sig-param"><span class="n">option_id</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">off_screen</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notebook</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.dpf.post.result_data.ResultData.plot_contour" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the contour result on its mesh support.</p>
+<p>The obtained figure depends on the support (can be a
+meshed_region or a time_freq_support).  If transient analysis,
+plot the last result if no time_scoping has been specified.
+The self.get_all_label_spaces() will return a string
+containing all the label spaces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>display_option</strong> (<em>str</em><em>, </em><em>optional</em>) – The name of the label you want to display. Default is <code class="docutils literal notranslate"><span class="pre">&quot;time&quot;</span></code>.</p></li>
+<li><p><strong>option_id</strong> (<em>int</em><em>, </em><em>optional</em>) – The list of label ids you want to display. Default is <code class="docutils literal notranslate"><span class="pre">[1]</span></code>.</p></li>
+<li><p><strong>off_screen</strong> (<em>bool</em><em>, </em><em>optional</em>) – Renders off screen when <code class="docutils literal notranslate"><span class="pre">True</span></code>.  Useful for automated screenshots.</p></li>
+<li><p><strong>notebook</strong> (<em>bool</em><em>, </em><em>optional</em>) – Option to force plotting within a jupyter notebook or
+external to the notebook as an interactive figure.</p></li>
+<li><p><strong>**kwargs</strong> (<em>optional</em>) – Additional keyword arguments for the plotter.  See
+<code class="docutils literal notranslate"><span class="pre">help(pyvista.plot)</span></code> for additional keyword arguments.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>Plot a result at the time_step number 1</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.dpf</span> <span class="kn">import</span> <span class="n">post</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">solution</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">load_solution</span><span class="p">(</span><span class="s1">&#39;file.rst&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">stress</span> <span class="o">=</span> <span class="n">solution</span><span class="o">.</span><span class="n">stress</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="n">post</span><span class="o">.</span><span class="n">locations</span><span class="o">.</span><span class="n">nodal</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sx</span> <span class="o">=</span> <span class="n">stress</span><span class="o">.</span><span class="n">xx</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sx</span><span class="o">.</span><span class="n">plot_contour</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The labels can be obtained using:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sx</span><span class="o">.</span><span class="n">get_all_label_spaces</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>[{‘elshape’: 1, ‘time’: 1}, {‘elshape’: 0, ‘time’: 1}]</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="result_object.html" title="previous page">Result Object</a>
+    <a class='right-next' id="next-link" href="../examples/index.html" title="next page">Examples</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2021, ANSYS.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
